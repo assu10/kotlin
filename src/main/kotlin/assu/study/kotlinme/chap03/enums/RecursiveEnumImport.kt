@@ -17,7 +17,8 @@ fun main() {
 
     // values() 를 사용하여 enum 의 값을 이터레이션함
     // values() 는 Array 를 반환하기 때문에 toList() 를 호출하여 배열을 List 로 만듬
-    println(Size.values().toList())
+    println(Size.values()) // [Lassu.study.kotlinme.chap03.enums.Size;@3d494fbf
+    println(Size.values().toList()) // [TINY, SMALL, LARGE]
     // [TINY, SMALL, LARGE]
 
     println(LARGE.ordinal)
