@@ -1,4 +1,4 @@
-package assu.study.kotlinme.chap05
+package assu.study.kotlinme.chap05.interfaces
 
 // 프로퍼티를 선언하는 인터페이스
 interface Player {

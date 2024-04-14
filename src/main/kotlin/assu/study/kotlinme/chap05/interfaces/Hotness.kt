@@ -1,4 +1,4 @@
-package assu.study.kotlinme.chap05
+package assu.study.kotlinme.chap05.interfaces
 
 interface Hotness {
     fun feedback(): String

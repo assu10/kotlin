@@ -1,4 +1,4 @@
-package assu.study.kotlinme.chap05
+package assu.study.kotlinme.chap05.interfaces
 
 // 단일 추상 메서드 (SAM) 인터페이스
 fun interface Action {
