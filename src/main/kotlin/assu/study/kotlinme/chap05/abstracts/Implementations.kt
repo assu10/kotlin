@@ -1,4 +1,4 @@
-package assu.study.kotlinme.chap05.abstract
+package assu.study.kotlinme.chap05.abstracts
 
 // ch, f() 는 각각 추상 프로퍼티와 추상 함수이므로 Parent 를 구현하는 클래스는 이 두 멤버를 꼭 오버라이드해야 함
 interface Parent {

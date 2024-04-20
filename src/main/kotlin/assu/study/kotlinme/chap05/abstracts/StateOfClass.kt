@@ -1,4 +1,4 @@
-package assu.study.kotlinme.chap05.abstract
+package assu.study.kotlinme.chap05.abstracts
 
 // name, list 프로퍼티에 저장된 값으로 구성됨
 class IntList(val name: String) {

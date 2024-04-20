@@ -1,4 +1,4 @@
-package assu.study.kotlinme.chap05.abstract
+package assu.study.kotlinme.chap05.abstracts
 
 interface AA {
     abstract val x: Int

@@ -1,4 +1,4 @@
-package assu.study.kotlinme.chap05.abstract
+package assu.study.kotlinme.chap05.abstracts
 
 abstract class WithProperty {
     // 아무 초기값도 없는 변수 선언
