@@ -12,7 +12,7 @@ class DataFile(val fileName: String) : File(targetDir, fileName) {
         }
     }
 
-    private fun erase() {
+    fun erase() {
         if (exists()) {
             delete()
         }
