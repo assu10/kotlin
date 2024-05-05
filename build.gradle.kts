@@ -26,6 +26,9 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
+    // for Kotlin test
+    implementation(kotlin("test"))
+
     // Logging
     implementation("io.github.microutils:kotlin-logging-jvm:3.0.5")
     implementation("org.slf4j:slf4j-simple:2.0.13")
