@@ -25,10 +25,10 @@ fun main() {
     val result5: Recyclable = recyclables.genericConstrainedRandom()
     val result6: Recyclable = recyclables.genericRandom()
 
-    println(result1) // assu.study.kotlinme.chap07.creatingGenerics.Recyclable@31221be2
-    println(result2) // assu.study.kotlinme.chap07.creatingGenerics.Recyclable@377dca04
-    println(result3) // assu.study.kotlinme.chap07.creatingGenerics.Recyclable@377dca04
+    println(result1.action()) // add to recyclable~
+    println(result2.action()) // add to recyclable~
+    println(result3.action()) // add to recyclable~
 
-    println(result5) // assu.study.kotlinme.chap07.creatingGenerics.Recyclable@31221be2
-    println(result6) // assu.study.kotlinme.chap07.creatingGenerics.Recyclable@31221be2
+    println(result5.action()) // add to recyclable~
+    println(result6.action()) // add to recyclable~
 }
