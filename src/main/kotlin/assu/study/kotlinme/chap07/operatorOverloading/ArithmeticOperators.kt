@@ -102,6 +102,9 @@ fun main() {
     println(two.plus(three)) // G(5)
     println(two * three) // G(6)
 
+    val t = true
+    println(!t) // false
+
     val thirteen = G(13)
     println(thirteen / three) // G(4)
     println(thirteen % three) // G(1)
