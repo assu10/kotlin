@@ -7,6 +7,7 @@ data class Num(val n: Int)
 operator fun Num.plus(rval: Num) = Num(n + rval.n)
 
 fun main() {
+    // 위의 연산자 오버로딩이 없으면 아래 수식은 오류남
     val result1 = Num(1) + Num(2)
     val result2 = Num(1).plus(Num(2))
 
