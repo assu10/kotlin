@@ -1,35 +1,34 @@
 package assu.study.kotlinme.chap07.propertyDelegation
 
+import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
-class ReadWriteable(var i: Int) {
+class ReadWritable2(var i: Int) {
     var msg = ""
 
-    // value 프로퍼티는 BasicReadWrite 객체에 의해 위임됨
-    var value: String by BasicReadWrite()
+    // value 프로퍼티는 BasicReadWrite2 객체에 의해 위임됨
+    var value: String by BasicReadWrite2()
 }
 
 // 위임 클래스
-class BasicReadWrite {
-    operator fun getValue(
-        rw: ReadWriteable,
+class BasicReadWrite2 : ReadWriteProperty<ReadWritable2, String> {
+    override fun getValue(
+        rw: ReadWritable2,
         property: KProperty<*>,
     ) = "getValue: ${rw.i}~"
-    // ) = "getValue: ${rw.value}, ${rw.i}~" // 여기서 rw.value 에 접근하면 stackoverflow 발생
 
-    operator fun setValue(
-        rw: ReadWriteable,
+    override fun setValue(
+        rw: ReadWritable2,
         property: KProperty<*>,
         s: String,
     ) {
         rw.i = s.toIntOrNull() ?: 0
         rw.msg = "setValue to ${rw.i}~"
-        // rw.msg = "setValue to $rw.i~"   // 이렇게 하면 ReadWritable 에 메모리 주소가 출력됨
     }
 }
 
 fun main() {
-    val x = ReadWriteable(1)
+    val x = ReadWritable2(1)
     println("1: " + x.value) // 1: getValue: 1~
     println("2: " + x.msg) // 2:
     println("3: " + x.i) // 3: 1
