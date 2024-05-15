@@ -2,6 +2,7 @@ package assu.study.kotlinme.chap07.propertyDelegation
 
 import kotlin.reflect.KProperty
 
+// 위임자 클래스
 class Readable(val i: Int) {
     // value 프로퍼티는 BasicRead() 객체에 의해 위임됨
     // 프로퍼티 뒤에 by 라고 지정하여 BasicRead 객체를 by 앞의 프로퍼티인 value 와 연결
@@ -12,7 +13,7 @@ class Readable(val i: Int) {
     // val value by BasicRead() // 이렇게 써도 됨
 }
 
-// 위임 클래스
+// 위임받는 클래스
 class BasicRead {
     // Readable 에 대한 접근을 가능하게 하는 Readable 파라메터를 얻음
     operator fun getValue(

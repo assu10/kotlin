@@ -3,6 +3,7 @@ package assu.study.kotlinme.chap07.propertyDelegation
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
+// 위임자 클래스
 class Readable2(val i: Int) {
     val value: String by BasicRead2()
 
@@ -10,7 +11,7 @@ class Readable2(val i: Int) {
     val value2: String by ReadOnlyProperty { _, _ -> "getValue: $i~~" }
 }
 
-// 위임 클래스
+// 위임받는 클래스
 class BasicRead2 : ReadOnlyProperty<Readable2, String> {
     override operator fun getValue(
         thisRef: Readable2,

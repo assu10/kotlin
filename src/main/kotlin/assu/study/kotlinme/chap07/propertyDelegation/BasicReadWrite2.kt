@@ -3,6 +3,7 @@ package assu.study.kotlinme.chap07.propertyDelegation
 import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
+// 위임자 클래스
 class ReadWritable2(var i: Int) {
     var msg = ""
 
@@ -10,7 +11,7 @@ class ReadWritable2(var i: Int) {
     var value: String by BasicReadWrite2()
 }
 
-// 위임 클래스
+// 위임받는 클래스
 class BasicReadWrite2 : ReadWriteProperty<ReadWritable2, String> {
     override fun getValue(
         rw: ReadWritable2,

@@ -2,6 +2,7 @@ package assu.study.kotlinme.chap07.propertyDelegation
 
 import kotlin.reflect.KProperty
 
+// 위임자 클래스
 class ReadWriteable(var i: Int) {
     var msg = ""
 
@@ -9,7 +10,7 @@ class ReadWriteable(var i: Int) {
     var value: String by BasicReadWrite()
 }
 
-// 위임 클래스
+// 위임받는 클래스
 class BasicReadWrite {
     operator fun getValue(
         rw: ReadWriteable,
