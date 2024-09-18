@@ -1,10 +1,12 @@
 package assu.study.kotlinme.chap06.exceptionHandling
 
-class IncorrectInputException1(message: String) : Exception(message)
+class IncorrectInputException1(
+    message: String,
+) : Exception(message)
 
 fun checkCode(code: Int) {
     if (code <= 1000) {
-        throw IllegalArgumentException("code must be > 1000: $code")
+        throw IncorrectInputException1("code must be > 1000: $code")
     }
 }
 
@@ -13,7 +15,7 @@ fun main() {
         // A1 은 16진수로 161
         checkCode("A1".toInt(16))
     } catch (e: IncorrectInputException1) {
-        println(e.message) // produces error code must be > 1000: 161
+        println(e.message) // code must be > 1000: 161
     } catch (e: IllegalArgumentException) {
         println("produces error ${e.message}")
     }
