@@ -18,7 +18,17 @@ fun main() {
     // component1()~
     // component2()~
     // 10
-    // 20
+    println(a)
+
+    // component1()~
+    //component2()~
+    //20
+    println(b)
+
+    //component1()~
+    //component2()~
+    //10
+    //20
     println(a)
     println(b)
 }
