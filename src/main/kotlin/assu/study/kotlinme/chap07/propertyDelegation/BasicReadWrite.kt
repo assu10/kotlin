@@ -3,7 +3,9 @@ package assu.study.kotlinme.chap07.propertyDelegation
 import kotlin.reflect.KProperty
 
 // 위임자 클래스
-class ReadWriteable(var i: Int) {
+class ReadWriteable(
+    var i: Int,
+) {
     var msg = ""
 
     // value 프로퍼티는 BasicReadWrite 객체에 의해 위임됨
@@ -25,6 +27,7 @@ class BasicReadWrite {
     ) {
         rw.i = s.toIntOrNull() ?: 0
         rw.msg = "setValue to ${rw.i}~"
+        // rw.value = "test~ ${rw.value}"   // 런타임 에러
         // rw.msg = "setValue to $rw.i~"   // 이렇게 하면 ReadWritable 에 메모리 주소가 출력됨
     }
 }

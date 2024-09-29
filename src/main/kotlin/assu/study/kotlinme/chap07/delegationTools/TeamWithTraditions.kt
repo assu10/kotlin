@@ -11,7 +11,7 @@ fun aName(
     println("$old to $new ~")
     true
 } else {
-    println("name must start with 'A' ~")
+    println("11 name must start with 'A' ~")
     false
 }
 
@@ -30,7 +30,7 @@ class TeamWithTraditions2 : Captain {
             println("$old to $new ~~")
             true
         } else {
-            println("name must start with 'A' ~~")
+            println("22 name must start with 'A' ~~")
             false
         }
     }
@@ -38,10 +38,10 @@ class TeamWithTraditions2 : Captain {
 
 fun main() {
     // Assu to ASSU1 ~
-    // name must start with 'A' ~
+    // 11 name must start with 'A' ~
     // ASSU1
     // Assu to ASSU1 ~~
-    // name must start with 'A' ~~
+    // 22 name must start with 'A' ~~
     // ASSU1
     listOf(
         TeamWithTraditions1(),
