@@ -11,6 +11,9 @@ val ages1 = listOf(20, 2, 20)
 fun people1(): List<Person1> = names1.zip(ages1) { name, age -> Person1(name, age) }
 
 fun main() {
+    // [Person1(name=Assu, age=20), Person1(name=Sibly, age=2), Person1(name=JaeHoon, age=20)]
+    println(people1())
+
     // associateWith() 사용
     val map: Map<Person1, String> = people1().associateWith { it.name }
 
